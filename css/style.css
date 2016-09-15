@@ -1,0 +1,238 @@
+body,
+div,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding:0;
+  margin:0;
+  font-family: 'Fira Mono', monospace;
+  font-weight: lighter;
+}
+
+.clear-fix {
+  overflow: auto;
+}
+
+body {
+	background: white;
+	width: 80%; 
+	margin: 15px auto 0; 
+}
+
+.education-entry,
+.work-entry,
+.project-entry {
+  padding: 0 5%;
+}
+
+h1 {
+  font-size: 190%;
+  color: #F2930C;
+  line-height: 48px;
+  display: inline;
+}
+
+h2 {
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 29px;
+  padding: 10px;
+  border-top: 1px dotted white; 
+}
+
+h3 {
+  font-style: italic;
+  font-size: 20px;
+  color: #000;
+  line-height: 22px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #4a4a4a;
+  line-height: 17px;
+}
+
+h2,
+h3,
+h4,
+h5 {
+ 	padding:10px 5%;
+
+}
+
+#name {
+	display: inline;
+	font-size: 116%;
+	color: #F2930C;
+}
+
+.highlight {
+	background-color: #F2930C; 
+	display: inline-block; 
+	color: #FFFFFF; 
+	font-size: 109%; 
+	padding: 4px 14px;
+}
+
+	header .highlight {
+		margin-left: 10px;
+	}
+
+
+.date-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+  float: left;
+}
+
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+  float: right;
+
+}
+
+p {
+  font-size: 14px;
+  color: #333;
+  line-height: 21px;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+  margin-top: 10px;
+  display: block;
+  background: rgba(0, 0, 0, .0);
+  font-size: 96%;
+}
+
+a:hover {
+	  text-decoration: none;
+	  background: rgba(0, 0, 0, .8);
+}
+
+.welcome-message {
+  font-style: italic;
+  font-size: 18px;
+  color: #f3f3f3;
+  line-height: 28px;
+}
+
+#skills-h3 {
+  display: none;
+}
+
+.orange {
+  background-color: #f5ae23;
+}
+
+.orange-text {
+  color: #f5ae23;
+}
+
+.white-text {
+  font-weight: bold;
+  color: #fff;
+}
+
+.gray {
+  background-color: rgb(103, 209, 213);
+  clear:both;
+  padding-bottom: 20px;
+}
+
+.dark-gray {
+  background-color: #67D1D5;
+}
+
+/* TODO: Replace with image later */
+#header {}
+
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.center-content {
+  padding: 2.5% 5%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.biopic {
+  float: left;
+  padding: 10px;
+  width: 200px;
+  display: none;
+}
+
+img {
+  padding: 10px;
+}
+
+span {
+  padding: 5px;
+}
+
+/* Media queries to handle various device widths */
+
+@media only screen and (max-width: 1024px) {
+  #lets-connect {
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (max-width:900px) {
+  .biopic {
+    width: 175px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #lets-connect {
+    margin-top: 10%;
+  }
+  .biopic {
+    width: 150px;
+  }
+  .welcome-message {
+    display: none;
+  }
+}
+
+#map {
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+}
+
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+@media only screen and (min-width: 750px) {
+  #skills-h3,
+  .biopic {
+    display: block;
+  }
+}
