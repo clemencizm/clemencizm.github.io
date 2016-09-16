@@ -16,18 +16,26 @@ document.getElementById("time_mx").innerHTML = timestamp_mexico.getDate() + " " 
 var contact = {
         "email": "clemence.lc@gmail.com",
         "skype": "jamgraphic",
-        "github": "https://github.com/clemencizm",
-        "twitter": "https://twitter.com/jamgraphic",
-        "blog": "http://jam-graphic.tumblr.com/",
-        "behance": "https://www.behance.net/clemencizm",
+        "github": "github.com/clemencizm",
+        "twitter": "twitter.com/jamgraphic",
+        "blog": "jam-graphic.tumblr.com/",
+        "behance": "behance.net/clemencizm",
 }; 
+
+    var formattedEmail = HTMLemail.replace("%data%", contact.email);
+    var formattedBehance = HTMLbehance.replace("%data%", contact.behance);
+    var formattedTwitter = HTMLtwitter.replace("%data%", contact.twitter);
+    var formattedGithub = HTMLgithub.replace("%data%", contact.github);
+    $("#footerContacts").append(formattedEmail + formattedBehance + formattedTwitter + formattedGithub);
+
+
 
 var bio = {
     "logoUrl": "images/logo-jam-graphic-diseno-digital.png",
     "profilUrl": "images/clemencizm.gif",
     "backgroundUrl": "images/background.jpg", 
     "welcomeMessage": "¡Hola! Soy Clemencizm, UX UI senior designer and profesional dreamer", 
-    "skills": ["UX", "UI", "look + feel", "visual concept", "css3", "html5", "web responsive", "bootstrap", "material design", "angular material", "gulp", "git for github", "sass", "SEO"
+    "skills": ["UX design", "UI", "look + feel", "visual concept", "css3", "html5", "web responsive", "bootstrap", "material design", "angular material", "gulp", "git for github", "sass", "SEO"
     ],
     "location": "Nací en Boulogne-sur-Mer, crecí entre Ouve-Wirquin y Lille, me libere en París y aprendí la vida en México.",
     "personalPlan": "Planeo re-nacer en Europa. Barcelona lo más probablemente.",
@@ -63,15 +71,15 @@ var dreams = ["publicar mis historias cortar", "realizar corto metrajes", "publi
 
 /* JSON  Javascript Object Notation*/
 var education = { 
-    "schools" : [ //schools is an array as it has sereval objects 
-        { // 1st object
+    "schools" : [ 
+        { 
             "name": "Académie Charpentier",
             "city" : "Paris, France",
             "diploma" : "Licencia Communicación Visual",
             "graduationYears" : "2001",
-            "online" : ["http://www.academie-charpentier.fr/", "https://www.facebook.com/academie.charpentier.paris/"] // array in the object
+            "online" : ["http://www.academie-charpentier.fr/", "https://www.facebook.com/academie.charpentier.paris/"] 
         },
-        { // 2nd object
+        { 
             "name" : "ASFORED",
             "city" : "Paris, France",
             "diploma" : "Licencia Production Editorial",
@@ -79,7 +87,7 @@ var education = {
             "website" : "http://asfored.org/"
         },
         {
-            "name" : "Master SChool Mx",
+            "name" : "Master School Mx",
             "city" : "México City, México",
             "diploma" : "",
             "graduationYears" : 2010,
@@ -95,6 +103,16 @@ var education = {
             ]
         }
     ]
+}
+
+for (school in education.schools) {
+    $("#education").append(HTMLschoolStart);
+
+    var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+    var formattedCity = HTMLschoolLocation.replace("%data%", education.schools[school].city);
+    var formattedGraduation = HTMLschoolDates.replace("%data%", education.schools[school].graduationYears);
+    var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].diploma);
+    $(".education-entry:last").append(formattedName + formattedCity + formattedGraduation + formattedDegree);
 }
 
 
@@ -124,9 +142,6 @@ for (job in work.jobs) {
     var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
     $(".work-entry:last").append(formattedEmployer + formattedWorkTitle);
 }
-
-
-
 
 
 

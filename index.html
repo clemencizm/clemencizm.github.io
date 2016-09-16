@@ -64,14 +64,14 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
             <span id="time_mx"></span>
     			</div>
     			<div id="lastUpdate-date"></div>
-    			<div id="climat">Clima [icon] y temperatura [] de la [ciudad de connexión]
+    			<!-- <div id="climat">Clima [icon] y temperatura [] de la [ciudad de connexión]
           </div>
           <div id="language">
             <span class="language_es">Es</span>
             <span class="language_cat">Cat</span>
             <span class="language_fr">Fr</span>
             <span class="language_en">En</span>
-          </div>
+          </div> -->
           <p id="name"></p>
 	    	</div>
 
@@ -91,7 +91,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       <h2>Where I've Lived and Worked</h2>
     </div>
     <div id="lets-connect" class="dark-gray">
-      <h2 class="">Let's Connect</h2>
+      <h2 class="">¡Contáctame!</h2>
         <ul id="footerContacts" class="flex-box">
       </ul>
     </div>
@@ -130,7 +130,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       document.getElementById('projects').style.display = 'none';
     }
     if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.backgroundColor = '#67D1D5';
+      document.getElementById('education').style.display = 'none';
     }
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('lets-connect').style.display = 'none';

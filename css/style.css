@@ -16,13 +16,13 @@ h6 {
 }
 
 .clear-fix {
-  overflow: auto;
+  /*overflow: auto;*/
 }
 
 body {
 	background: white;
 	width: 80%; 
-	margin: 15px auto 0; 
+	margin: 0 auto 
 }
 
 .education-entry,
@@ -68,10 +68,15 @@ h5 {
 
 }
 
+#header-top {
+	text-align: center;
+}
+
 #name {
-	display: inline;
-	font-size: 116%;
-	color: #F2930C;
+	color: #ffa700;
+	display: inline-block;
+	margin: 40px auto 20px;
+	font-size: 2vw;
 }
 
 .highlight {
@@ -83,25 +88,32 @@ h5 {
 }
 
 	header .highlight {
-		margin-left: 10px;
+		margin-top: 4px;
+		display: block;
+		font-size: 150%;
 	}
 
 
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
-  line-height: 16px;
+  color: black;
+  line-height: 26px;
+  margin-right: 10px;
   float: left;
 }
 
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
-  line-height: 16px;
+  color: #ffa700;
+  line-height: 26px;
   float: right;
+}
 
+a:hover .location-text, 
+a:hover .date-text {
+	color:white;
 }
 
 p {
@@ -122,6 +134,7 @@ a {
 a:hover {
 	  text-decoration: none;
 	  background: rgba(0, 0, 0, .8);
+	  color: white;
 }
 
 .welcome-message {
@@ -133,6 +146,8 @@ a:hover {
 
 #skills-h3 {
   display: none;
+  border-top: 1px dotted black;
+  padding-top: 30px;
 }
 
 .orange {
@@ -140,7 +155,8 @@ a:hover {
 }
 
 .orange-text {
-  color: #f5ae23;
+  font-size: 80%;
+  text-transform: uppercase;
 }
 
 .white-text {
@@ -155,7 +171,7 @@ a:hover {
 }
 
 .dark-gray {
-  background-color: #67D1D5;
+  background-color: #F2930C;
 }
 
 /* TODO: Replace with image later */
@@ -170,12 +186,14 @@ a:hover {
 }
 
 .center-content {
-  padding: 2.5% 5%;
+  padding: 1.5% 0;
 }
 
 ul {
   list-style-type: none;
 }
+
+li { list-style: none; }
 
 .biopic {
   float: left;
@@ -192,13 +210,23 @@ span {
   padding: 5px;
 }
 
+
 /* Media queries to handle various device widths */
 
-@media only screen and (max-width: 1024px) {
+
   #lets-connect {
     margin-top: 5%;
+    padding-bottom: 20px;
   }
-}
+
+	  #lets-connect ul {
+	  	margin: 0 5%;
+	  }
+
+		  #lets-connect a { 
+		  	display: inline; 
+		  }
+
 
 @media only screen and (max-width:900px) {
   .biopic {
@@ -207,9 +235,13 @@ span {
 }
 
 @media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
+ 
+ #name {margin-top:10px;}
+
+	#name, header .highlight { 
+		font-size: 100%;
+	}
+
   .biopic {
     width: 150px;
   }
@@ -231,8 +263,11 @@ span {
 }
 
 @media only screen and (min-width: 750px) {
+ 
   #skills-h3,
   .biopic {
     display: block;
   }
+
+
 }
